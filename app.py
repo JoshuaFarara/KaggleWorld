@@ -9,6 +9,6 @@ def hello_world():
     age = 28
     occupation = "Visiting Instructor of Computer Science at Georgia Southern University"
     undergrad = "BS in Economics"
-    masters =  "MS Computer Science"
+    masters =  "MS in Computer Science"
     
     return render_template('index.html', name=name, age=age, occupation=occupation, undergrad=undergrad, masters=masters)
