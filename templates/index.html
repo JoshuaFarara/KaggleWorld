@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaggle World Analysis</title>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css"
+    />
+    <script
+        defer
+        src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+</head>
+<section class="hero is-dark is-bold">
+    <div class="hero-body">
+        <div class="container">
+            <h1>Welcom to Kaggle World</h1>
+            <br />
+            <p>This website has been curated by {{ name }} to display his data analysis and dat science projects.
+                All data is coming from Kaggle, in which is the processed and analyzed using jupyter notebooks, then curated and visualized here!</p>
+        </div>
+    </div> 
+</section>
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="content is-medium">
+                <h2>About The Author</h2>
+                
+                <h3>Age:</h3>
+                <p>{{ age }}</p>
+                
+                <h3>Education:</h3>
+                <p>{{ undergrad }} | {{ masters }}</p>
+                
+                <h3>Occupation:</h3>
+                <p>{{ occupation }}</p>
+                
+                <h3>More Skills:</h3>
+                <p>Barber</p>
+               
+                <div class="container">
+                    <button
+                        class="button is-large"
+                        onClick="location.href='https://www.linkedin.com/in/joshuafarara/'"
+                    >
+                        Connect with me on LinkedIn! 
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<footer class="footer">
+    <div class="content has-text-centered">
+      <p><strong>Basic Flask App</strong> by <a href="#">FTA_Dev</a>.</p>
+    </div>
+  </footer>
+</html>
