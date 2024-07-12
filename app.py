@@ -11,7 +11,7 @@ def home():
     undergrad = "BS in Economics"
     masters =  "MS in Computer Science"
     
-    return render_template('index.html', name=name, age=age, occupation=occupation, undergrad=undergrad, masters=masters)
+    return render_template('base.html', name=name, age=age, occupation=occupation, undergrad=undergrad, masters=masters)
 
 @app.route('/data-analysis')
 def data_analysis():
