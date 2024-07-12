@@ -13,8 +13,14 @@
     ></script>
 </head>
 <section class="hero is-dark is-bold">
+    
     <div class="hero-body">
         <div class="container">
+            <ul id="navigation">
+                {% for item in navigation %}
+                    <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+                {% endfor %}
+                </ul>
             <h1 class="title">Welcome to Joshua's Kaggle World</h1>
             <br />
             <p class="subtitle">This website has been curated by {{ name }} to display his data analysis and data science projects.
