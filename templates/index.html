@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaggle World Analysis</title>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css"
+    />
+    <script
+        defer
+        src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+</head>
+<section class="hero is-dark is-bold">
+    
+    <div class="hero-body">
+        <div class="container">
+            <ul id="navigation">
+                {% for item in navigation %}
+                    <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+                {% endfor %}
+                </ul>
+            <h1 class="title">Welcome to Joshua's Kaggle World</h1>
+            <br />
+            <p class="subtitle">This website has been curated by {{ name }} to display his data analysis and data science projects.
+                All data is coming from Kaggle, in which it is processed and analyzed using jupyter notebooks, then curated and visualized here!</p>
+        </div>
+    </div> 
+</section>
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="content is-medium">
+                <h2 class="has-text-centered"><u> About The Author</u></h2>
+                
+                <h3>Age:</h3>
+                <p>{{ age }}</p>
+                
+                <h3>Education:</h3>
+                <p>{{ undergrad }} | {{ masters }}</p>
+                
+                <h3>Occupation:</h3>
+                <p>{{ occupation }}</p>
+                
+                <h3>More Skills and Hobbies:</h3>
+                <p>Barber, Fitness Coach, Image Consultant, Photographer, Videographer, Golfer, Painter </p>
+               
+                <div class="container">
+                    <button
+                        class="button is-large"
+                        onClick="location.href='https://www.linkedin.com/in/joshuafarara/'"
+                    >
+                        Connect with me on LinkedIn! 
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<footer class="footer">
+    <div class="content has-text-centered">
+      <p><strong>Kaggle World</strong> by <a href="https://joshuafarara.com/">Joshua Farara</a>.</p>
+    </div>
+  </footer>
+</html>
