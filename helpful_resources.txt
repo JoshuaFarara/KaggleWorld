@@ -1,0 +1,8 @@
+get-ExecutionPolicy
+Set-ExecutionPolicy Unrestricted -Scope Process
+
+after environment is active, run command below for security
+Set-ExecutionPolicy Default -Scope Process
+
+# Activate Virtual Environment
+venv/Scripts/activate

@@ -7,7 +7,7 @@ user input of title
 
 import os
 import json
-from notebook_template import get_notebook_structure
+from notebook_template import get_notebook_template
 
 
 class Notebook:
@@ -20,12 +20,16 @@ class Notebook:
 
 
     def generate_notebook(self):
-        return get_notebook_structure(self.notebook_title)
+        return get_notebook_template(self.notebook_title)
+    
+    def assign_dataset(self):
+        dataset = input() 
+        pass
 
     def get_title(self):
         print(f"Notebook title: {self.notebook_title}")
 
-    def save_template(self):
+    def build_template(self):
         notebook_content = self.generate_notebook()
 
         sanitized_title = self.notebook_title.lower().replace(' ', '_')
@@ -41,4 +45,4 @@ class Notebook:
 title = input('Enter a title of the notebook: ')
 notebook = Notebook(title)
 notebook.get_title()
-notebook.save_template()
+notebook.build_template()
