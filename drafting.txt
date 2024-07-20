@@ -1,0 +1,17 @@
+<main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+  
+        {% include '/navigation.html' %}
+    
+        {% block content %}{% endblock content %}
+    
+    </main>
+
+
+<div class="sidebar">
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Notebooks</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+</div>

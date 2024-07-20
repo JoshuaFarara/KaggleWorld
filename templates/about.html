@@ -1,0 +1,51 @@
+{% extends "/base.html" %}
+
+{% block title %}About{% endblock %}
+{% block content %}
+
+<section class="hero is-dark is-bold">
+               
+    <div class="hero-body">
+        <div class="container">
+            <ul id="sidebar">
+                {% for item in sidebar %}
+                    <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+                {% endfor %}
+            </ul>
+            <h1 class="title">Welcome to Joshua's Kaggle World</h1>
+            <br />
+            <p class="subtitle">This website has been curated by {{ name }} to display his data analysis and data science projects.
+                All data is coming from Kaggle, in which it is processed and analyzed using jupyter notebooks, then curated and visualized here!</p>
+        </div>
+    </div> 
+</section>
+<section class="section">
+    <div class="container">
+        <div class="content is-medium">
+            <h2 class="has-text-centered"><u> About The Author</u></h2>
+            
+            <h3>Age:</h3>
+            <p>{{ age }}</p>
+            
+            <h3>Education:</h3>
+            <p>{{ undergrad }} | {{ masters }}</p>
+            
+            <h3>Occupation:</h3>
+            <p>{{ occupation }}</p>
+            
+            <h3>More Skills and Hobbies:</h3>
+            <p>Barber, Fitness Coach, Image Consultant, Photographer, Videographer, Golfer, Painter </p>
+           
+            <div class="container">
+                <button
+                    class="button is-large"
+                    onClick="location.href='https://www.linkedin.com/in/joshuafarara/'"
+                >
+                    Connect with me on LinkedIn! 
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
