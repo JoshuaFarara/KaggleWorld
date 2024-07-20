@@ -15,3 +15,14 @@
       <li><a href="#">Contact</a></li>
     </ul>
 </div>
+
+
+<ul class="dropdown-menu" aria-labelledby="navbarDropdown">          
+    {% for notebook in notebooks %}
+    <li><a class="dropdown-item" href="#">{{ notebook }}</a></li>
+    {% if not loop.last %}
+    <ul class="dropdown-divider"></ul>
+    {% endif %}
+    {% endfor %}
+    <li><a class="dropdown-item" href="#">more</a></li>
+</ul>
