@@ -15,13 +15,28 @@
     <div>
         <h2>Coffee Sales Report</h2>
 
-        <div>
-            <h4>Total Revenue</h4>
-            <img src="{{ url_for('static', filename='visualizations/Total_Revenue_in_UAH_and_USD.jpg') }}" alt="Total Revenue">
-    
-    
-            <h4>Dates and Time analysis</h4>
-        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h4>Total Revenue</h4>
+                    <img src="{{ url_for('static', filename='visualizations/Total_Revenue_in_UAH_and_USD.jpg') }}" alt="Total Revenue" class="img-fluid">
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h4>Total Amount Paid for Each Coffee Name</h4>
+                    <img src="{{ url_for('static', filename='visualizations/Total Amount Paid for Each Coffee Name (UAH and USD).jpg') }}" alt="Total Amount Paid for Each Coffee Name" class="img-fluid">
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h4>Total Amount Paid for Each Coffee Name</h4>
+                    <img src="{{ url_for('static', filename='visualizations/Total_Amount_Paid_for_Each_Coffee_Name_(UAH_and_USD).jpg') }}" alt="Total Amount Paid for Each Coffee Name" class="img-fluid">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h4>Dates and Time Analysis</h4>
+                    <!-- <img src="{{ url_for('static', filename='visualizations/Dates_and_Time_Analysis.jpg') }}" alt="Dates and Time Analysis" class="img-fluid"> -->
+                </div>
+                <!-- Add more images here as needed -->
+            </div>
         </div>
     </div>
     
