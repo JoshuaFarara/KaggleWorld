@@ -1,0 +1,35 @@
+{% extends "/notebook-dashboard.html" %}
+
+{% block title %}Coffee Sales{% endblock %}
+{% block content %}
+     <!-- Main -->
+       
+  <main class="main-container grid-container">   
+    <div class="main-title">
+      <h2>Coffee Sales</h2>
+    </div>
+    <!-- Sidebar -->
+    {% include '/sidebar.html' %}
+    <!-- End Sidebar -->
+
+    <div>
+        <h2>Coffee Sales Report</h2>
+
+        <div>
+            <h4>Total Revenue</h4>
+            <img src="{{ url_for('static', filename='visualizations/Total_Revenue_in_UAH_and_USD.jpg') }}" alt="Total Revenue">
+    
+    
+            <h4>Dates and Time analysis</h4>
+        
+        </div>
+    </div>
+    
+
+
+  </main>
+
+    
+
+  <!-- End Main -->
+{% endblock %}
