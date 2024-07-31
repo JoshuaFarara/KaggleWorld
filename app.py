@@ -23,3 +23,10 @@ def notebooks():
     notebooks_folder = './notebooks'
     notebooks = os.listdir(notebooks_folder)
     return render_template('notebook-dashboard.html', notebooks=notebooks)
+
+@app.route('/cofee_sales')
+def cofee_sales():
+    return render_template('cofee_sales.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
