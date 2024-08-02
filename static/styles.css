@@ -14,7 +14,7 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-columns: 260px 40fr 1fr 1fr;
     grid-template-rows: 0.2fr 3fr;
     grid-template-areas: 
         'sidebar header header header'
@@ -109,9 +109,20 @@ body {
     overflow-y: auto;
     padding: 20px 20px;
     color: rgba(255, 255, 255, 0.95); 
+    width: 100%; /* Ensure it takes the full width */
+    height: 100%; /
 }
 
 .main-title {
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
 }
+/*-------- MAIN -------*/
+
+/*-------- Streamlit -------*/
+.streamlit {
+    width: 100%;
+    height: 800px;
+    border: none;
+}
+/*-------- Streamlit End -------*/
