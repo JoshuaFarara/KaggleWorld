@@ -7,7 +7,7 @@ user input of title
 
 import os
 import json
-from notebook_template import get_notebook_template
+from notebook_template import get_notebook_structure
 
 
 class Notebook:
@@ -20,7 +20,7 @@ class Notebook:
 
 
     def generate_notebook(self):
-        return get_notebook_template(self.notebook_title)
+        return get_notebook_structure(self.notebook_title)
     
     def assign_dataset(self):
         dataset = input() 
