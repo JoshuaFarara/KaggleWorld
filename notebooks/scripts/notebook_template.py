@@ -52,7 +52,7 @@ def get_notebook_structure(notebook_title):
                     "### Metadata\n",
                     "\n",
                     "Source:\n",
-                    "Collection Me",
+                    "Collection Methodology",
                     "\n",
                     "License:\n",
                     "### Task\n",
@@ -91,8 +91,17 @@ def get_notebook_structure(notebook_title):
                         "import matplotlib.pyplot as plt\n",
                         "import seaborn as sns\n",
                         "import scipy as sp\n",
+                        "import os\n",
+                        "import sys\n",
                         "# this is for jupyter notebook to show the plot in the notebook itself instead of opening a new window\n",
                         "%matplotlib inline"
+
+                        "for dirname, _, filenames in os.walk('/kaggle/input'):"
+                           "for filename in filenames:"
+                               "print(os.path.join(dirname, filename))"
+
+                        "# You can write up to 20GB to the current directory (/kaggle/working/) that gets preserved as output when you create a version using " 
+                        "# You can also write temporary files to /kaggle/temp/, but they won't be saved outside of the current session"   
                 ]
             },
             {
@@ -110,10 +119,32 @@ def get_notebook_structure(notebook_title):
                 ]
             },
             {
+                    "cell_type": "code",
+                    "execution_count": None,
+                    "metadata": {},
+                    "outputs": [],
+                    "source": [
+                        "# Kaggle Notebook"
+                        "# df = pd.read_csv('/kaggle/input/coffee-sales/index.csv')"
+                        "# Local Machine Notebook"
+                        "df = pd.read_csv('../../data/data.csv')"
+                ]
+            },
+            {
                     "cell_type": "markdown",
                     "metadata": {},
                     "source": [
                         "### Set the option to show maximum columns"
+                ]
+            },
+            {
+                    "cell_type": "code",
+                    "execution_count": None,
+                    "metadata": {},
+                    "outputs": [],
+                    "source": [
+                        "pd.set_option('display.max_columns', None) "
+                        "pd.set_option('display.max_rows', None)"
                 ]
             },
             {
@@ -138,6 +169,15 @@ def get_notebook_structure(notebook_title):
                     "metadata": {},
                     "source": [
                         "### Let's see the column names"
+                ]
+            },
+            {
+                    "cell_type": "code",
+                    "execution_count": None,
+                    "metadata": {},
+                    "outputs": [],
+                    "source": [
+                        "df.columns"
                 ]
             },
             {
@@ -175,8 +215,133 @@ def get_notebook_structure(notebook_title):
             {
                     "cell_type": "markdown",
                     "metadata": {},
-                    "source": []
-            }
+                    "source": [
+                        "### Count the missing values"
+                    ]
+            },
+            {
+                    "cell_type": "code",
+                    "execution_count": None,
+                    "metadata": {},
+                    "outputs": [],
+                    "source": [
+                        "df.isnull().sum()"
+                ]
+            },
+            {
+                    "cell_type": "markdown",
+                    "metadata": {},
+                    "source": [
+                        "## Cleaning Data"
+                    ]
+            },
+            {
+                    "cell_type": "markdown",
+                    "metadata": {},
+                    "source": [
+                        "### First Step of Cleaning"   
+                    ]
+            },
+            {
+                    "cell_type": "markdown",
+                    "metadata": {},
+                    "source": [
+                        "### Second Step of Cleaning"
+                    ]
+            },
+            {
+                    "cell_type": "markdown",
+                    "metadata": {},
+                    "source": [
+                        "### Third Step of Cleaning"
+                    ]
+            },
+            {
+                    "cell_type": "markdown",
+                    "metadata": {},
+                    "source": [
+                        "### Fourth Step of Cleaning"
+                    ]
+            },
+            {
+                    "cell_type": "markdown",
+                    "metadata": {},
+                    "source": [
+                        "### Fifth Step of Cleaning"
+                    ]
+            },
+            {
+                    "cell_type": "markdown",
+                    "metadata": {},
+                    "source": [
+                        "### Restructure dateframe order."
+                    ]
+            },
+            {
+                    "cell_type": "code",
+                    "execution_count": None,
+                    "metadata": {},
+                    "outputs": [],
+                    "source": [
+                        "# fill in restructureed dateframe format for desired look of data.  "
+                ]
+            },
+            {
+                    "cell_type": "markdown",
+                    "metadata": {},
+                    "source": [
+                        "## Analytical Questions"
+                    ]
+            },
+            {
+                    "cell_type": "markdown",
+                    "metadata": {},
+                    "source": [
+                        "Analysis Subject 1"
+                        "1. "
+                        "2. "
+                        "3. "
+                        "4. "
+                        "5. "
+                        "Analysis Subject 2"
+                        "6. "
+                        "7. "
+                        "8. "
+                        "9. "
+                        "10. "
+                    ]
+            },
+            {
+                    "cell_type": "markdown",
+                    "metadata": {},
+                    "source": [
+                        "## Summary"
+                    ]
+            },
+            {
+                    "cell_type": "markdown",
+                    "metadata": {},
+                    "source": [
+                        "## Contact Information"
+                    ]
+            },
+            {
+                    "cell_type": "markdown",
+                    "metadata": {},
+                    "source": [
+                        "Click on link below to contact/follow/correct me:\n",
+                        "\n",
+                        "Email: joshua.farara@gmail.com\n",
+                        "\n",
+                        "[LinkedIn](https://www.linkedin.com/in/joshuafarara/)\n",
+                        "\n",
+                        "[Facebook](https://www.facebook.com/josh.farara/)\n",
+                        "\n",
+                        "[Twitter](https://x.com/FararaTheArtist)\n",
+                        "\n",
+                        "[Github](https://github.com/JoshuaFarara)\n"
+                ]
+            },
         ],
         "metadata": {
         "kernelspec": {
