@@ -16,7 +16,7 @@ def get_notebook_structure(notebook_title):
                     "## About Author\n", 
 
                     "Author: Joshua Farara\n",
-
+                    "\n",
                     f"Project: {notebook_title}\n",
 
                     "### Contact Info\n",
@@ -52,6 +52,7 @@ def get_notebook_structure(notebook_title):
                     "### Metadata\n",
                     "\n",
                     "Source:\n",
+                    "\n",
                     "Collection Methodology",
                     "\n",
                     "License:\n",
@@ -94,14 +95,14 @@ def get_notebook_structure(notebook_title):
                         "import os\n",
                         "import sys\n",
                         "# this is for jupyter notebook to show the plot in the notebook itself instead of opening a new window\n",
-                        "%matplotlib inline"
+                        "%matplotlib inline\n"
+                        "\n"
+                        "for dirname, _, filenames in os.walk('/kaggle/input'):\n"
+                        "   for filename in filenames:\n"
+                        "       print(os.path.join(dirname, filename))\n"
 
-                        "for dirname, _, filenames in os.walk('/kaggle/input'):"
-                           "for filename in filenames:"
-                               "print(os.path.join(dirname, filename))"
-
-                        "# You can write up to 20GB to the current directory (/kaggle/working/) that gets preserved as output when you create a version using " 
-                        "# You can also write temporary files to /kaggle/temp/, but they won't be saved outside of the current session"   
+                        "# You can write up to 20GB to the current directory (/kaggle/working/) that gets preserved as output when you create a version using\n" 
+                        "# You can also write temporary files to /kaggle/temp/, but they won't be saved outside of the current session\n"   
                 ]
             },
             {
@@ -124,10 +125,11 @@ def get_notebook_structure(notebook_title):
                     "metadata": {},
                     "outputs": [],
                     "source": [
-                        "# Kaggle Notebook"
-                        "# df = pd.read_csv('/kaggle/input/coffee-sales/index.csv')"
-                        "# Local Machine Notebook"
-                        "df = pd.read_csv('../../data/data.csv')"
+                        "# Kaggle Notebook\n"
+                        "# df = pd.read_csv('/kaggle/input/coffee-sales/index.csv')\n"
+                        "\n"
+                        "# Local Machine Notebook\n"
+                        "df = pd.read_csv('../../data/data.csv')\n"
                 ]
             },
             {
@@ -143,8 +145,8 @@ def get_notebook_structure(notebook_title):
                     "metadata": {},
                     "outputs": [],
                     "source": [
-                        "pd.set_option('display.max_columns', None) "
-                        "pd.set_option('display.max_rows', None)"
+                        "pd.set_option('display.max_columns', None)\n"
+                        "pd.set_option('display.max_rows', None)\n"
                 ]
             },
             {
@@ -152,7 +154,7 @@ def get_notebook_structure(notebook_title):
                     "metadata": {},
                     "source": [
                         "### Get a sneak peek of data\n",
-                        "The purpose of a sneak peek is to get a quick overview of the data and identify any potential problems or areas of interest"
+                        "The purpose of a sneak peek is to get a quick overview of the data and identify any potential problems or areas of interest\n"
                 ]
             },
             {
@@ -283,7 +285,7 @@ def get_notebook_structure(notebook_title):
                     "metadata": {},
                     "outputs": [],
                     "source": [
-                        "# fill in restructureed dateframe format for desired look of data.  "
+                        "# Fill in restructureed dateframe format for desired look of data.  "
                 ]
             },
             {
@@ -297,18 +299,29 @@ def get_notebook_structure(notebook_title):
                     "cell_type": "markdown",
                     "metadata": {},
                     "source": [
-                        "Analysis Subject 1"
-                        "1. "
-                        "2. "
-                        "3. "
-                        "4. "
-                        "5. "
-                        "Analysis Subject 2"
-                        "6. "
-                        "7. "
-                        "8. "
-                        "9. "
-                        "10. "
+                        "Analysis Subject 1\n"
+                        "\n"
+                        "1. \n"
+                        "\n"
+                        "2. \n"
+                        "\n"
+                        "3. \n"
+                        "\n"
+                        "4. \n"
+                        "\n"
+                        "5. \n"
+                        "\n"
+                        "Analysis Subject 2\n"
+                        "\n"
+                        "6. \n"
+                        "\n"
+                        "7. \n"
+                        "\n"
+                        "8. \n"
+                        "\n"
+                        "9. \n"
+                        "\n"
+                        "10. \n"
                     ]
             },
             {
