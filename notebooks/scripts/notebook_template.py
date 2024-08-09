@@ -51,6 +51,8 @@ def get_notebook_structure(notebook_title):
                     "\n",
                     "### Metadata\n",
                     "\n",
+                    "Author:\n",
+                    "\n",
                     "Source:\n",
                     "\n",
                     "Collection Methodology",
