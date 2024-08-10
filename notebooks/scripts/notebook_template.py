@@ -44,12 +44,22 @@ def get_notebook_structure(notebook_title):
                     "Dataset: Link\n",
                     "\n",
                     "Brief Description of dataset\n",
-                    "\n",
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "metadata": {},
+                "source": [
                     "### Dataset Columns Names\n",
                     "\n",
                     "Features:\n",
-                    "\n",
-                    "### Metadata\n",
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "metadata": {},
+                "source": [
+                    "### Metadata\n"
                     "\n",
                     "Author:\n",
                     "\n",
@@ -57,14 +67,30 @@ def get_notebook_structure(notebook_title):
                     "\n",
                     "Collection Methodology",
                     "\n",
-                    "License:\n",
+                    "License:\n"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "metadata": {},
+                "source": [
                     "### Task\n",
                     "Describe task\n",
-                    "\n",
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "metadata": {},
+                "source": [
                     "### Objective\n",
                     "\n",
-                    "Describe observed objective of dataset.\n",
-                    "\n",
+                    "Describe observed objective of dataset.\n"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "metadata": {},
+                "source": [
                     "### Kernel Version Used\n",
                     "\n",
                     "Python==3.11.7\n"
