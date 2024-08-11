@@ -33,6 +33,11 @@ def notebooks():
     notebooks = os.listdir(notebooks_folder)
     return render_template('notebook-dashboard.html', notebooks=notebooks)
 
+@app.route('/new-notebook')
+def new_notebook():
+    return 
+    pass
+
 '''Display data within the notebook dashboard'''
 @app.route('/cofee_sales')
 def cofee_sales():
