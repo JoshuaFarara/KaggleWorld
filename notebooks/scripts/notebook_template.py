@@ -16,7 +16,7 @@ def get_notebook_structure(notebook_title):
                     "## About Author\n", 
 
                     "Author: Joshua Farara\n",
-
+                    "\n",
                     f"Project: {notebook_title}\n",
 
                     "### Contact Info\n",
@@ -44,24 +44,53 @@ def get_notebook_structure(notebook_title):
                     "Dataset: Link\n",
                     "\n",
                     "Brief Description of dataset\n",
-                    "\n",
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "metadata": {},
+                "source": [
                     "### Dataset Columns Names\n",
                     "\n",
                     "Features:\n",
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "metadata": {},
+                "source": [
+                    "### Metadata\n"
                     "\n",
-                    "### Metadata\n",
+                    "Author:\n",
                     "\n",
                     "Source:\n",
-                    "Collection Me",
                     "\n",
-                    "License:\n",
+                    "Collection Methodology",
+                    "\n",
+                    "License:\n"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "metadata": {},
+                "source": [
                     "### Task\n",
                     "Describe task\n",
-                    "\n",
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "metadata": {},
+                "source": [
                     "### Objective\n",
                     "\n",
-                    "Describe observed objective of dataset.\n",
-                    "\n",
+                    "Describe observed objective of dataset.\n"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "metadata": {},
+                "source": [
                     "### Kernel Version Used\n",
                     "\n",
                     "Python==3.11.7\n"
@@ -91,8 +120,17 @@ def get_notebook_structure(notebook_title):
                         "import matplotlib.pyplot as plt\n",
                         "import seaborn as sns\n",
                         "import scipy as sp\n",
+                        "import os\n",
+                        "import sys\n",
                         "# this is for jupyter notebook to show the plot in the notebook itself instead of opening a new window\n",
-                        "%matplotlib inline"
+                        "%matplotlib inline\n"
+                        "\n"
+                        "for dirname, _, filenames in os.walk('/kaggle/input'):\n"
+                        "   for filename in filenames:\n"
+                        "       print(os.path.join(dirname, filename))\n"
+
+                        "# You can write up to 20GB to the current directory (/kaggle/working/) that gets preserved as output when you create a version using\n" 
+                        "# You can also write temporary files to /kaggle/temp/, but they won't be saved outside of the current session\n"   
                 ]
             },
             {
@@ -110,6 +148,19 @@ def get_notebook_structure(notebook_title):
                 ]
             },
             {
+                    "cell_type": "code",
+                    "execution_count": None,
+                    "metadata": {},
+                    "outputs": [],
+                    "source": [
+                        "# Kaggle Notebook\n"
+                        "# df = pd.read_csv('/kaggle/input/coffee-sales/index.csv')\n"
+                        "\n"
+                        "# Local Machine Notebook\n"
+                        "df = pd.read_csv('../../data/data.csv')\n"
+                ]
+            },
+            {
                     "cell_type": "markdown",
                     "metadata": {},
                     "source": [
@@ -117,11 +168,21 @@ def get_notebook_structure(notebook_title):
                 ]
             },
             {
+                    "cell_type": "code",
+                    "execution_count": None,
+                    "metadata": {},
+                    "outputs": [],
+                    "source": [
+                        "pd.set_option('display.max_columns', None)\n"
+                        "pd.set_option('display.max_rows', None)\n"
+                ]
+            },
+            {
                     "cell_type": "markdown",
                     "metadata": {},
                     "source": [
                         "### Get a sneak peek of data\n",
-                        "The purpose of a sneak peek is to get a quick overview of the data and identify any potential problems or areas of interest"
+                        "The purpose of a sneak peek is to get a quick overview of the data and identify any potential problems or areas of interest\n"
                 ]
             },
             {
@@ -138,6 +199,15 @@ def get_notebook_structure(notebook_title):
                     "metadata": {},
                     "source": [
                         "### Let's see the column names"
+                ]
+            },
+            {
+                    "cell_type": "code",
+                    "execution_count": None,
+                    "metadata": {},
+                    "outputs": [],
+                    "source": [
+                        "df.columns"
                 ]
             },
             {
@@ -175,8 +245,144 @@ def get_notebook_structure(notebook_title):
             {
                     "cell_type": "markdown",
                     "metadata": {},
-                    "source": []
-            }
+                    "source": [
+                        "### Count the missing values"
+                    ]
+            },
+            {
+                    "cell_type": "code",
+                    "execution_count": None,
+                    "metadata": {},
+                    "outputs": [],
+                    "source": [
+                        "df.isnull().sum()"
+                ]
+            },
+            {
+                    "cell_type": "markdown",
+                    "metadata": {},
+                    "source": [
+                        "## Cleaning Data"
+                    ]
+            },
+            {
+                    "cell_type": "markdown",
+                    "metadata": {},
+                    "source": [
+                        "### First Step of Cleaning"   
+                    ]
+            },
+            {
+                    "cell_type": "markdown",
+                    "metadata": {},
+                    "source": [
+                        "### Second Step of Cleaning"
+                    ]
+            },
+            {
+                    "cell_type": "markdown",
+                    "metadata": {},
+                    "source": [
+                        "### Third Step of Cleaning"
+                    ]
+            },
+            {
+                    "cell_type": "markdown",
+                    "metadata": {},
+                    "source": [
+                        "### Fourth Step of Cleaning"
+                    ]
+            },
+            {
+                    "cell_type": "markdown",
+                    "metadata": {},
+                    "source": [
+                        "### Fifth Step of Cleaning"
+                    ]
+            },
+            {
+                    "cell_type": "markdown",
+                    "metadata": {},
+                    "source": [
+                        "### Restructure dateframe order."
+                    ]
+            },
+            {
+                    "cell_type": "code",
+                    "execution_count": None,
+                    "metadata": {},
+                    "outputs": [],
+                    "source": [
+                        "# Fill in restructureed dateframe format for desired look of data.  "
+                ]
+            },
+            {
+                    "cell_type": "markdown",
+                    "metadata": {},
+                    "source": [
+                        "## Analytical Questions"
+                    ]
+            },
+            {
+                    "cell_type": "markdown",
+                    "metadata": {},
+                    "source": [
+                        "Analysis Subject 1\n"
+                        "\n"
+                        "1. \n"
+                        "\n"
+                        "2. \n"
+                        "\n"
+                        "3. \n"
+                        "\n"
+                        "4. \n"
+                        "\n"
+                        "5. \n"
+                        "\n"
+                        "Analysis Subject 2\n"
+                        "\n"
+                        "6. \n"
+                        "\n"
+                        "7. \n"
+                        "\n"
+                        "8. \n"
+                        "\n"
+                        "9. \n"
+                        "\n"
+                        "10. \n"
+                    ]
+            },
+            {
+                    "cell_type": "markdown",
+                    "metadata": {},
+                    "source": [
+                        "## Summary"
+                    ]
+            },
+            {
+                    "cell_type": "markdown",
+                    "metadata": {},
+                    "source": [
+                        "## Contact Information"
+                    ]
+            },
+            {
+                    "cell_type": "markdown",
+                    "metadata": {},
+                    "source": [
+                        "Click on link below to contact/follow/correct me:\n",
+                        "\n",
+                        "Email: joshua.farara@gmail.com\n",
+                        "\n",
+                        "[LinkedIn](https://www.linkedin.com/in/joshuafarara/)\n",
+                        "\n",
+                        "[Facebook](https://www.facebook.com/josh.farara/)\n",
+                        "\n",
+                        "[Twitter](https://x.com/FararaTheArtist)\n",
+                        "\n",
+                        "[Github](https://github.com/JoshuaFarara)\n"
+                ]
+            },
         ],
         "metadata": {
         "kernelspec": {

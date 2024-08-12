@@ -55,4 +55,47 @@
             </div>
         </div>
     </div>
-    
+
+# Insert dataset details into the notebook content
+        if self.dataset:
+            dataset_info = {
+                "cell_type": "markdown",
+                "metadata": {},
+                "source": [
+                    "## About Data\n",
+                    "\n",
+                    f"Title: {self.dataset.dataset}\n",
+                    "\n",
+                    f"Dataset: {self.dataset.url}\n",
+                    "\n",
+                    "Brief Description of dataset\n",
+                    "\n",
+                    "### Dataset Columns Names\n",
+                    "\n",
+                    "Features:\n",
+                    "\n",
+                    "### Metadata\n",
+                    "\n",
+                    f"Author:{self.dataset.username}\n",
+                    "\n",
+                    "Source:\n",
+                    "\n",
+                    "Collection Methodology\n",
+                    "\n",
+                    "License:\n",
+                    "\n",
+                    "### Task\n",
+                    "Describe task\n",
+                    "\n",
+                    "### Objective\n",
+                    "\n",
+                    "Describe observed objective of dataset.\n",
+                    "\n",
+                    "### Kernel Version Used\n",
+                    "\n",
+                    "Python==3.11.7\n"
+                ]
+            }
+            notebook_content['cells'].append(dataset_info)
+        else:
+            print("Could not download dataset...")
