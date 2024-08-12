@@ -2,15 +2,68 @@ body {
     margin: 0;
     padding: 0;
     background-color: #1d2634;
+    background-color: #979797;
+    background-color: #ffffff;
+    color: #9e9ea4;
     color: #9e9ea4;
     font-family: "Merriweather", sans-serif;
 }
+
+.brlarge { 
+    display: block; 
+    margin-bottom: 2em; 
+} 
 
 .material-icons-outlined {
     vertical-align: middle;
     line-height: 1px;
     font-size: 35px;
 }
+
+
+/*-------- HEADER -------*/
+.header {
+    grid-area: header;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0px 0 0px;
+    box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
+}
+
+.header-nav {
+    width: 100%
+}
+
+.header-right{
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    display: none;
+}
+
+/*-------- HEADER ENd -------*/
+
+
+/*-------- MAIN -------*/
+.main-container {
+    grid-area: main;
+    overflow-y: auto;
+    padding: 20px 20px;
+    color: rgba(255, 255, 255, 0.95); 
+    width: 100%; /* Ensure it takes the full width */
+    height: 100%; /
+}
+
+.main-title {
+    /* display: flex; */
+    justify-content: space-between;
+}
+
 
 .grid-container {
     display: grid;
@@ -21,25 +74,15 @@ body {
         'sidebar main main main'
         ;
     height: 100vh;
+    background-color: #1d2634;
 
 }
 
-/*-------- HEADER -------*/
-.header {
-    grid-area: header;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 30px 0 30px;
-    box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
-}
+/*-------- MAIN END -------*/
 
-.menu-icon {
-    display: none;
-}
 
 /*-------- SIDEBAR -------*/
+
 #sidebar {
     grid-area: sidebar;
     height: 100%;
@@ -103,21 +146,8 @@ body {
     z-index: 12 !important;
 }
 
-/*-------- MAIN -------*/
-.main-container {
-    grid-area: main;
-    overflow-y: auto;
-    padding: 20px 20px;
-    color: rgba(255, 255, 255, 0.95); 
-    width: 100%; /* Ensure it takes the full width */
-    height: 100%; /
-}
+/*-------- SIDEBAR END -------*/
 
-.main-title {
-    /* display: flex; */
-    justify-content: space-between;
-}
-/*-------- MAIN -------*/
 
 /*-------- Streamlit -------*/
 .streamlit {
