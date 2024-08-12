@@ -35,8 +35,7 @@ def notebooks():
 
 @app.route('/new-notebook')
 def new_notebook():
-    return 
-    pass
+    return render_template('new-notebook.html')
 
 '''Display data within the notebook dashboard'''
 @app.route('/cofee_sales')
