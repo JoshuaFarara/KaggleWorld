@@ -43,7 +43,10 @@ def cofee_sales():
     def run_streamlit():
         if 'STREAMLIT_SERVER' not in os.environ:
             os.environ['STREAMLIT_SERVER'] = '1'
-            subprocess.Popen(["streamlit", "run", "coffee_sales_streamlit.py"])
+            subprocess.Popen(["streamlit", "run", "coffee_sales_streamlit.py"], 
+                 creationflags=subprocess.CREATE_NO_WINDOW, 
+                 stdout=subprocess.PIPE, 
+                 stderr=subprocess.PIPE)
         # subprocess.run(["streamlit", "run", "coffee_sales_streamlit.py"])
 
     thread = threading.Thread(target=run_streamlit)
