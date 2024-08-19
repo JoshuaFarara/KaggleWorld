@@ -1,5 +1,5 @@
 {% extends "/base.html" %}
-
+{% set active_page = 'new_notebook' %}
 {% block title %}About{% endblock %}
 {% block content %}
 
@@ -21,25 +21,21 @@
             <p>Generate a Kaggle World Notebook Template</p>
                 
         </div>
-        <div>
-            <form>
-                <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Dataset Url: </label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                </div>
-                <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Title:</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                <!-- <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div> -->
-                <br>
+        <div class="row">
+            <form method="POST" action="{{ url_for('new_notebook')}}">
+                <div class="col-lg-7 offset-lg-2 my-5">
+                    <label for="url" class="form-label">Dataset Url: </label>
+                    <input class="form-control" type="url" name="dataset_url"> 
+
+                    <label for="title" class="form-label">Title:</label>
+                    <input class="form-control" type="text" name="title">
+                    
+                    <label for="description" class="form-label">Description:</label>
+                    <input class="form-control" type="text" name="description">
+                    
+                <hr>
                 <button
-                    class="button is-large "
-                    onClick="location.href='https://www.linkedin.com/in/joshuafarara/'">Start a new notebook 
+                    class="button is-large" type="submit" value="Submit">Start a new notebook 
                 </button>
             </form>
         </div>

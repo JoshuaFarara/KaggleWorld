@@ -1,4 +1,5 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect, url_for, g
+import sqlite3
 import os
 import subprocess
 import threading
@@ -33,8 +34,27 @@ def notebooks():
     notebooks = os.listdir(notebooks_folder)
     return render_template('notebook-dashboard.html', notebooks=notebooks)
 
-@app.route('/new-notebook')
+@app.route('/new-notebook', methods=["GET", "POST"])
 def new_notebook():
+    conn = get_db()
+    c = conn.cursor()
+
+    if request.method == "POST":
+        # Process the form data
+        c.execute("""INSERT INTO datasets
+                    (title, url, description, category_id, tag_id)
+                    VALUES (?,?,?,?,?)""",
+                    (
+                        request.form.get("dataset_url"),
+                        request.form.get("title"),
+                        request.form.get("description"),
+                        1,
+                        1
+                    )
+        )
+        conn.commit()
+        # Redirect to some page
+        return redirect(url_for("home"))
     return render_template('new-notebook.html')
 
 '''Display data within the notebook dashboard'''
@@ -53,6 +73,17 @@ def cofee_sales():
     thread.start()
     return render_template('cofee_sales.html')
 
+def get_db():
+    db = getattr(g, "_database", None)
+    if db is None:
+        db = g._database = sqlite3.connect("db/kaggleworld.db")
+    return db
+
+@app.teardown_appcontext
+def close_connection(exception):
+    db = getattr(g, "_database", None)
+    if db is not None:
+        db.close()
 
 
 if __name__ == '__main__':
