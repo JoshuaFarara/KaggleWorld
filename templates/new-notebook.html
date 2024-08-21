@@ -25,7 +25,8 @@
             <form method="POST" action="{{ url_for('new_notebook')}}">
                 <div class="col-lg-7 offset-lg-2 my-5">
                     <label for="url" class="form-label">Dataset Url: </label>
-                    <input class="form-control" type="url" name="dataset_url"> 
+                    <input class="form-control" type="text" name="url">
+                            <!-- placeholder="https://kaggle.com/datasests/KaggleWorld/">  -->
 
                     <label for="title" class="form-label">Title:</label>
                     <input class="form-control" type="text" name="title">

@@ -26,7 +26,7 @@ c.execute("""CREATE TABLE datasets(
                     id              INTEGER PRIMARY KEY AUTOINCREMENT,
                     title           TEXT,
                     url             TEXT,
-                    description     REAL,
+                    description     TEXT,
                     category_id     INTEGER,
                     tag_id          INTEGER,
                     FOREIGN KEY(category_id) REFERENCES categories(id),

@@ -12,7 +12,7 @@ c = conn.cursor()
 def show_datasets():
     try:
         datasets = c.execute("""SELECT
-                                d.id, d.title, d.description, d.price, d.image, c.name, c.id, t.name, t.id
+                                d.id, d.title, d.url,  d.description, c.name, c.id, t.name, t.id
                              FROM
                                 datasets AS d
                              INNER JOIN categories     AS c ON d.category_id     = c.id

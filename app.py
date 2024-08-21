@@ -25,14 +25,39 @@ def about():
 '''Base notebook dashboard navigation'''
 @app.route('/notebook-dashboard')
 def notebooks():
-    # Start the Streamlit app if it's not already running
-    # if 'STREAMLIT_SERVER' not in os.environ:
-    #     os.environ['STREAMLIT_SERVER'] = '1'
-    #     subprocess.Popen(["streamlit", "run", "streamlit_app.py"])
-
     notebooks_folder = './notebooks'
     notebooks = os.listdir(notebooks_folder)
     return render_template('notebook-dashboard.html', notebooks=notebooks)
+
+'''Base notebook dashboard navigation'''
+@app.route('/notebook-dashboard/datasets')
+def datasets():
+    conn = get_db()
+    c = conn.cursor()
+    datasets_from_db = c.execute("""SELECT
+                            d.id, d.title, d.url, d.description, c.name, c.id, t.name, t.id
+                            FROM
+                               datasets AS d
+                            INNER JOIN categories     AS c ON d.category_id     = c.id
+                            INNER JOIN tags           AS t ON d.tag_id          = t.id
+                            ORDER BY d.id DESC
+        """)
+    datasets = []
+    for row in datasets_from_db:
+        dataset = {
+            "id": row[0],
+            "title": row[1],
+            "url": row[2],
+            "description": row[3],
+            "category": row[4],
+            "tag": row[5],
+        }
+        datasets.append(dataset)
+
+    notebooks_folder = './notebooks'
+    notebooks = os.listdir(notebooks_folder)
+
+    return render_template('datasets.html', datasets=datasets, notebooks=notebooks)
 
 @app.route('/new-notebook', methods=["GET", "POST"])
 def new_notebook():
@@ -45,8 +70,8 @@ def new_notebook():
                     (title, url, description, category_id, tag_id)
                     VALUES (?,?,?,?,?)""",
                     (
-                        request.form.get("dataset_url"),
                         request.form.get("title"),
+                        request.form.get("url"),
                         request.form.get("description"),
                         1,
                         1
@@ -54,7 +79,7 @@ def new_notebook():
         )
         conn.commit()
         # Redirect to some page
-        return redirect(url_for("home"))
+        return redirect(url_for("datasets"))
     return render_template('new-notebook.html')
 
 '''Display data within the notebook dashboard'''

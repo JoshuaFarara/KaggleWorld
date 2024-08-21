@@ -43,9 +43,9 @@ class Dataset:
 
 
 
-dataset = Dataset() 
-dataset.url_converter()
-dataset.list_dataset_files()
-dataset.download_dataset()
-dataset.get_metadata()
+# dataset = Dataset() 
+# dataset.url_converter()
+# dataset.list_dataset_files()
+# dataset.download_dataset()
+# dataset.get_metadata()
 # kaggle.api.dataset_metadata(dataset,path='./data')
