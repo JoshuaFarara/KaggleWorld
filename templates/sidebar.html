@@ -7,13 +7,18 @@
       <div>
         <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
       </div>
-      <span class="material-icons-outlined">dashboard</span>
+      <span class="material-icons-outlined">6</span>
     </div>
 
     <ul class="sidebar-list">
         <li class="sidebar-list-item">
             <a href="/notebook-dashboard">
             <span class="material-icons-outlined">Dashboard</span>
+            </a>
+        </li>
+        <li class="sidebar-list-item">
+            <a href="/notebook-dashboard/datasets">
+            <span class="material-icons-outlined">Datasets</span>
             </a>
         </li>
         <li class="sidebar-list-item dropdown">
@@ -28,6 +33,12 @@
                 {% endif %}
                 {% endfor %}
             </ul>
+      </li>
+      <li class="sidebar-list-item">
+        <span class="material-icons-outlined">Notebooks</span>
+      </li>
+      <li class="sidebar-list-item">
+        <span class="material-icons-outlined">Create New Notebook</span>
       </li>
       <li class="sidebar-list-item">
         <span class="material-icons-outlined">Settings</span>

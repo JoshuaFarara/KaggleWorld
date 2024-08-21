@@ -26,11 +26,11 @@ class Notebook:
             os.makedirs(self.folder_path)
 
 
-    def generate_notebook(self):
-        return get_notebook_structure(self.notebook_title)
+    # def generate_notebook(self):
+    #     return get_notebook_structure(self.notebook_title)
     
     def assign_dataset(self):
-         # Create Dataset object and download the dataset
+        #  Create Dataset object and download the dataset
         self.dataset = Dataset()
         self.dataset.url_converter()
         self.dataset.list_dataset_files()
@@ -42,7 +42,8 @@ class Notebook:
         print(f"Notebook title: {self.notebook_title}")
 
     def build_template(self):
-        notebook_content = self.generate_notebook()
+        # notebook_content = self.generate_notebook()
+        notebook_content = get_notebook_structure(self.notebook_title)
 
         sanitized_title = self.notebook_title.lower().replace(' ', '_')
         
